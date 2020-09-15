@@ -16,12 +16,12 @@ namespace ConsoleApp3
 
 
                 case "good":
-                    Console.WriteLine("Noice:)");
+                    Console.WriteLine("Nice:)");
                     break;
 
 
                 case "bad":
-                    Console.WriteLine("shet:(" + "bye");
+                    Console.WriteLine("bye");
                     break;
             }
 
@@ -29,14 +29,14 @@ namespace ConsoleApp3
             {
                 if (i == 2)
                 {
-                    Console.WriteLine("Yup thats teh nummber");
+                    Console.WriteLine("Yup thats the nummber");
                 }
             }
 
             for (int i = 0; i < 3; i--)
             {
                 while (i > 3)
-                    Console.WriteLine("Ye");
+                    Console.WriteLine("hi");
                 break;
             }
 
