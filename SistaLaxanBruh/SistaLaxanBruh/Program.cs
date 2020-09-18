@@ -7,6 +7,8 @@ namespace SistaLaxanBruh
     class Program
 
     {
+        private static object array;
+
         static void Main(string[] args)
         {
             int[] randomNummbers = { 1, 2, 3, 4, 5 };
@@ -29,7 +31,7 @@ namespace SistaLaxanBruh
             revertedWordsList(words);
 
 
-            int[] nummbers = { 3, 2, 8, 6, 5 };
+            int[] nummbers = { 3, 2, 8, 6, 5, 9, 14 };
 
             Console.WriteLine(highestNummber(nummbers));
 
@@ -63,11 +65,37 @@ namespace SistaLaxanBruh
 
 
 
-        static void highestNummber(int[] nummbers)
+        static int highestNummber(int[] nummbers)
         {
 
+            int temp = 0;
 
-            return;
+          Boolean loop = false;
+
+
+            while (loop)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    if (nummbers[i] > nummbers[i + 1]) {
+
+                        temp = nummbers[i + 1];
+                        nummbers[i + 1] = nummbers[i];
+                        nummbers[i] = temp;
+
+
+                    }
+                }
+                else
+                {
+
+                }
+
+                Console.WriteLine(nummbers[6]);
+            }
+
+
+            return temp;
         }
     }
 }
