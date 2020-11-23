@@ -21,11 +21,43 @@ namespace oop_uppgift
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
+        long nummber1 = 0;
+        long nummber2 = 0;
+        string operation = "";
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
    
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if()
 
+            Button button = sender as Button;
+
+            if (e.Source is Button )
+            {
+
+                switch (Button.Content)
+                {
+
+                    case 1: "1";
+                    case 2: "2";
+
+
+
+
+                }
+
+               // var talet(string) = Text.split('+');
+               // tal1 = Convert.ToInt32(tealet(string)[0])
+
+
+
+
+            }
 
         }
     }
