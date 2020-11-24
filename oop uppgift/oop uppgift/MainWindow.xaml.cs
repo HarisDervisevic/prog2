@@ -22,43 +22,57 @@ namespace oop_uppgift
     public partial class MainWindow : Window
     {
 
-
-        long nummber1 = 0;
-        long nummber2 = 0;
-        string operation = "";
-
         public MainWindow()
         {
             InitializeComponent();
+
         }
-   
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            Button button = sender as Button;
-
-            if (e.Source is Button )
+            if (e.Source is Button button)
             {
 
-                switch (Button.Content)
+                switch (button.Content)
                 {
+                    case "0":
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+                    case "+":
+                    case "-":
+                    case "÷":
+                    case "√":
+                    case "^":
+                    case "⋅":
+                    case ",":
 
-                    case 1: "1";
-                    case 2: "2";
+                        text_block.Text += button.Content;
+                        break;
+
+                    case "clear":
+                        text_block.Text = "";
+                        break;
 
 
-
-
+                    case "Calc":
+                        calculations.calculation(text_block.Text);
+                        break;
                 }
-
-               // var talet(string) = Text.split('+');
-               // tal1 = Convert.ToInt32(tealet(string)[0])
-
-
-
 
             }
 
+
         }
+
     }
-}
+    }
+
+ 
