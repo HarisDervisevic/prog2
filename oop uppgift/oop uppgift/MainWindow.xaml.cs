@@ -64,40 +64,11 @@ namespace oop_uppgift
 
                     case "Calc":
 
-                        string[] list = text_block.Text.Split('+', '-', '÷', '⋅');
-                        var value1 = Convert.ToDouble(list[0]);
-                        var value2 = Convert.ToDouble(list[1]);
+                        text_block.Text = calculations.calculation(text_block.Text);
 
-
-                        if (text_block.Text.Contains("+"))
-                        {
-                            var result = value1 + value2;
-
-                        }
-
-                        else if (text_block.Text.Contains(-))
-                        {
-                            var result = value1 - value2;
-
-                        }
-
-                        else if (text_block.Text.Contains(÷))
-                        {
-                            var result = value1 / value2;
-
-                        }
-
-                        else if (operation == "⋅")
-                        {
-
-                            var result = value1 * value2;
-
-                        }
-
-
-                        // var talet(string) = Text.split('+');
-                        // tal1 = Convert.ToInt32(talet(string)[0])
                         break;
+
+                    
 
                 }
 
