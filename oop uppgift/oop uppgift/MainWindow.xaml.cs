@@ -28,6 +28,8 @@ namespace oop_uppgift
 
         }
 
+        //Metoden tar in input från användaren och lägger in det i text_block, varierar 
+        //beroende på vilken knapp användaren tryckt på
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -48,8 +50,8 @@ namespace oop_uppgift
                     case "9":
                     case "+":
                     case "-":
-                    case "÷":
                     case "√":
+                    case "÷":
                     case "^":
                     case "⋅":
                     case ",":
@@ -57,18 +59,45 @@ namespace oop_uppgift
                         text_block.Text += button.Content;
                         break;
 
+                        //Sätter mitt textblock till tomt om det finns något skrivet
+
                     case "clear":
-                        text_block.Text = "";
+                        if(text_block.Text != "")
+                        {
+                            text_block.Text = " ";
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nothing to delete");
+                        }
                         break;
 
+
+                        //Om det finns något skrivet så kommer den att beräkna det, kommer ej krascha ifall text_blocket är tomt
 
                     case "Calc":
 
-                        text_block.Text = calculations.calculation(text_block.Text);
+                        if(text_block.Text != " ")
+                        {
+                            text_block.Text = calculations.calculation(text_block.Text);
+                        }
+
+                        else 
+                        {
+                            Console.WriteLine("Nothing to calculate");
+                        }
+                        
 
                         break;
 
-                    
+                        /*
+                    case "√":
+                        text_block.Text += button.Content;
+                        text_block.Text = calculations.Squrt_function(text_block.Text);
+
+                        break;
+                        */
+
 
                 }
 
